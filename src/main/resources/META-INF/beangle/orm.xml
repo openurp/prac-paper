@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<orm>
+  <mapping class="org.openurp.prac.paper.model.DefaultMapping" name="paper"/>
+  <naming>
+    <profile package="org.openurp.prac.paper" pluralize="true" schema="prac" prefix="pp_">
+      <annotation class="org.beangle.data.model.annotation.config" schema="cfg" prefix="prac_"/>
+    </profile>
+  </naming>
+</orm>

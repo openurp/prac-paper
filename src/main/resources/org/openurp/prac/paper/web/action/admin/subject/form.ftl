@@ -1,0 +1,16 @@
+[#ftl]
+[@b.head/]
+[@b.toolbar title="修改论文主题"]bar.addBack();[/@]
+  [@b.form action=b.rest.save(subject) theme="list"]
+    [@b.textfield name="subject.code" label="代码" value="${subject.code!}" required="true" maxlength="20"/]
+    [@b.textfield name="subject.name" label="名称" value="${subject.name!}" required="true" maxlength="20"/]
+    [@b.textfield name="subject.enName" label="英文名称" value="${subject.enName!}" maxlength="100"/]
+    [@b.startend label="有效期限"
+      name="subject.beginOn,subject.endOn" required="true,false"
+      start=subject.beginOn end=subject.endOn format="date"/]
+    [@b.textfield name="subject.remark" label="备注" value="${subject.remark!}" maxlength="3"/]
+    [@b.formfoot]
+      [@b.reset/]&nbsp;&nbsp;[@b.submit value="action.submit"/]
+    [/@]
+  [/@]
+[@b.foot/]
