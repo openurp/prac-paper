@@ -22,8 +22,8 @@ import org.beangle.commons.collection.Collections
 import org.beangle.commons.lang.Strings
 import org.beangle.ems.app.EmsApp
 import org.beangle.ems.app.web.WebBusinessLogger
-import org.beangle.web.action.context.ActionContext
-import org.beangle.web.action.view.{Status, View}
+import org.beangle.webmvc.context.ActionContext
+import org.beangle.webmvc.view.{Status, View}
 import org.openurp.base.hr.model.Teacher
 import org.openurp.base.model.{Project, Semester, User}
 import org.openurp.base.std.model.Student

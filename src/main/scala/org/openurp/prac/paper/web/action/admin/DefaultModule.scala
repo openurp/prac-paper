@@ -17,7 +17,7 @@
 
 package org.openurp.prac.paper.web.action.admin
 
-import org.beangle.cdi.bind.BindModule
+import org.beangle.commons.cdi.BindModule
 import org.openurp.prac.paper.service.PaperService
 
 class DefaultModule extends BindModule {

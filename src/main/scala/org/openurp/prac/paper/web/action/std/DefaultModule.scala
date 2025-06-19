@@ -17,7 +17,7 @@
 
 package org.openurp.prac.paper.web.action.std
 
-import org.beangle.cdi.bind.BindModule
+import org.beangle.commons.cdi.BindModule
 
 class DefaultModule extends BindModule {
 

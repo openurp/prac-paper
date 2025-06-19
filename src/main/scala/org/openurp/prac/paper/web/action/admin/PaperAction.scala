@@ -22,10 +22,11 @@ import org.beangle.commons.file.zip.Zipper
 import org.beangle.commons.io.{Files, IOs}
 import org.beangle.commons.lang.{Strings, SystemInfo}
 import org.beangle.commons.net.http.HttpUtils.followRedirect
+import org.beangle.commons.activation.MediaTypes
 import org.beangle.data.dao.{Condition, OqlBuilder}
 import org.beangle.ems.app.EmsApp
-import org.beangle.web.action.context.ActionContext
-import org.beangle.web.action.view.{Stream, View}
+import org.beangle.webmvc.context.ActionContext
+import org.beangle.webmvc.view.{Stream, View}
 import org.beangle.webmvc.support.action.{ExportSupport, RestfulAction}
 import org.openurp.base.model.Project
 import org.openurp.prac.paper.model.Paper
@@ -77,7 +78,7 @@ class PaperAction extends RestfulAction[Paper], ProjectSupport, ExportSupport[Pa
       val targetZip = new File(SystemInfo.tmpDir + "/paper/paper.zip")
       Zipper.zip(dir, targetZip)
       val fileName = semester.schoolYear + "_" + semester.name + " 学术论文竞赛" + s"${papers.size}篇.zip"
-      Stream(targetZip, "application/zip", fileName)
+      Stream(targetZip, MediaTypes.ApplicationZip, fileName)
     }
   }
 

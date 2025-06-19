@@ -24,9 +24,9 @@ ThisBuild / description := "The OpenURP Practice Paper Webapp"
 ThisBuild / homepage := Some(url("http://openurp.github.io/prac-paper/index.html"))
 ThisBuild / resolvers += Resolver.mavenLocal
 
-val apiVer = "0.41.6"
-val starterVer = "0.3.40"
-val baseVer = "0.4.38"
+val apiVer = "0.44.0"
+val starterVer = "0.3.58"
+val baseVer = "0.4.51"
 val openurp_base_api = "org.openurp.base" % "openurp-base-api" % apiVer
 val openurp_stater_web = "org.openurp.starter" % "openurp-starter-web" % starterVer
 val openurp_base_tag = "org.openurp.base" % "openurp-base-tag" % baseVer
