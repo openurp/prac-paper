@@ -1,0 +1,31 @@
+<beangle xmlns="http://beangle.github.io/schema/framework"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://beangle.github.io/schema/framework http://beangle.github.io/schema/framework-1.0.xsd">
+
+  <ems app-name="prac-paper-webapp"/>
+  <cdi>
+    <module class="org.openurp.prac.paper.web.action.admin.DefaultModule"/>
+    <module class="org.openurp.prac.paper.web.action.std.DefaultModule"/>
+    <module class="org.beangle.serializer.text.DefaultModule"/>
+    <module class="org.beangle.serializer.json.DefaultModule"/>
+    <module class="org.openurp.starter.web.ProjectModule"/>
+  </cdi>
+
+  <orm>
+    <mapping class="org.openurp.prac.paper.model.DefaultMapping" name="paper"/>
+    <naming>
+      <profile package="org.openurp.prac.paper" pluralize="true" schema="prac" prefix="pp_">
+        <annotation class="org.beangle.data.model.annotation.config" schema="cfg" prefix="prac_"/>
+      </profile>
+    </naming>
+  </orm>
+
+  <mvc>
+    <profile package="org.openurp.prac.paper.web.action">
+      <url path="/" suffix="" style="seo"/>
+      <interceptor name="web.Interceptor.hibernate"/>
+      <interceptor name="web.Interceptor.security"/>
+    </profile>
+  </mvc>
+
+</beangle>
